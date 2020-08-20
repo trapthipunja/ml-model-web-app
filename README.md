@@ -1,6 +1,6 @@
 # ml-model-web-app
 
-# Deploying a deep learning model on web
+## Deploying a deep learning model on web
 
 This repository is to get a hands-on approach to deploy machine learning and deep learning models on web using flask and python.
 
