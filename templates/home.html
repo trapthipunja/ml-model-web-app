@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.center {
+  margin: auto;
+  width: 60%;
+  border: 3px solid #733421;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+<div class="center">
+<h1> Welcome to IRIS Prediction with Flask </h1>
+<h2>Please enter your flower measurements (in cm) below:</h2>
+<form  method="POST">
+    {# This hidden_tag is a CSRF security feature. #}
+    {{ form.hidden_tag() }}
+    {{ form.sep_len.label }} {{form.sep_len}}
+    <br>
+    {{ form.sep_wid.label}} {{form.sep_wid}}
+    <br>
+    {{form.pet_len.label}}{{form.pet_len}}
+    <br>
+    {{form.pet_wid.label}}{{form.pet_wid}}
+    <br>
+    {{ form.submit() }}
+</form>
+ </div>
+</body>
+</html>

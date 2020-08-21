@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.center {
+  margin: auto;
+  width: 60%;
+  border: 3px solid #733421;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+<html>
+<div class="center">
+<h1> Below is the information you provided:</h1>
+<ul>
+ <li>Sepal Length (cm): {{session['sep_len']}}</li>
+ <li>Sepal Width (cm): {{session['sep_wid']}}</li>
+ <li>Petal Length(cm): {{session['pet_len']}}</li>
+ <li>Petal Width (cm): {{session['pet_wid']}}</li>
+</ul>
+<h2> Predicted Flower Class is: {{results}}</h2>
+</div>
+</body>
+</html>
