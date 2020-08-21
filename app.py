@@ -2,7 +2,6 @@ from flask import Flask, render_template, session, redirect, url_for, session
 from flask_wtf import FlaskForm
 from wtforms import TextField, SubmitField
 from wtforms.validators import NumberRange
-
 import numpy as np
 from tensorflow.keras.models import load_model
 import joblib
@@ -29,16 +28,12 @@ def return_prediction(model, scaler, sample_json):
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'someRandomKey'
+app.config['IRIS'] = 'iris'
 
 # REMEMBER TO LOAD THE MODEL AND THE SCALER!
 flower_model = load_model("final_iris_model.h5")
 flower_scaler = joblib.load("iris_scaler.pkl")
 
-
-# Now create a WTForm Class
-# Lots of fields available:
-# http://wtforms.readthedocs.io/en/stable/fields.html
 class FlowerForm(FlaskForm):
     sep_len = TextField('Sepal Length')
     sep_wid = TextField('Sepal Width')
@@ -54,7 +49,7 @@ def index():
     form = FlowerForm()
     # If the form is valid on submission (we'll talk about validation next)
     if form.validate_on_submit():
-        # Grab the data from the breed on the form.
+        # Grab the data from the initial form.
 
         session['sep_len'] = form.sep_len.data
         session['sep_wid'] = form.sep_wid.data
