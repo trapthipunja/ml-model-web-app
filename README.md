@@ -1,6 +1,4 @@
-# ml-model-web-app
-
-## Deploying a deep learning model on web
+# Deploying a deep learning model on web (ml-model-web-app)
 
 This repository is to get a hands-on approach to deploy machine learning and deep learning models on web using flask and python.
 
@@ -11,3 +9,4 @@ This repository is to get a hands-on approach to deploy machine learning and dee
   - Deploy on a cloud application platform such as GCP, AWS or Heroku
 
 
+Link to the deployed app: https://ml-model-web-app.herokuapp.com/
